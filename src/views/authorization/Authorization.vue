@@ -2,14 +2,21 @@
   <div class="authorization">
     <div class="authorization--form">
       <label class="authorization--name">
-        Name \ Email:
-        <input v-model="name" class="authorization--input"/>
+        <input
+          v-model="name"
+          class="authorization--input"
+          placeholder="Enter name..."
+        />
       </label>
       <label class="authorization--password">
-        Password:
-        <input v-model="password" type="password" class="authorization--input"/>
+        <input
+            v-model="password"
+            type="password"
+            class="authorization--input"
+            placeholder="Enter password..."
+        />
       </label>
-      <button @click="handleClick">Sign in</button>
+      <button class="authorization--button" @click="handleClick">Sign in</button>
     </div>
   </div>
 </template>
@@ -44,13 +51,19 @@ export default  {
 <style>
 .authorization {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .authorization--form {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: #ffd5c2;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 .authorization--input, .authorization--password {
   margin-bottom: 10px;
